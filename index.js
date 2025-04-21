@@ -176,11 +176,10 @@ async function run() {
 
     // Send a ping to confirm a successful connection
     // await client.db("admin").command({ ping: 1 });
-    // console.log(
-    //   "Pinged your deployment. You successfully connected to MongoDB!"
-    // );
-  }
-  catch (error) {
+    console.log(
+      "Pinged your deployment. You successfully connected to MongoDB!"
+    );
+  } catch (error) {
     console.error(error);
   } finally {
     // Ensures that the client will close when you finish/error
@@ -193,7 +192,6 @@ app.get("/", (req, res) => {
   res.send("Hello Jobs!");
 });
 
-// app.listen(port, () => {
-//   console.log(`Example app listening on port ${port}`);
-// });
-module.exports=app;
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
